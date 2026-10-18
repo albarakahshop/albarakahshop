@@ -1233,6 +1233,7 @@ const products=[
 
 let cart=JSON.parse(localStorage.getItem("albarakah_cart")||"[]"),active="সব";
 let currentProduct=null,currentImage=0;
+let productDetailQty=1;
 const money=n=>"৳"+Number(n).toLocaleString("bn-BD");
 // ===== PRODUCT PRICE SETTINGS =====
 // প্রতিটি পণ্যে শুধু price (মূল দাম) এবং discount (%) লিখলেই হবে।
@@ -1251,6 +1252,23 @@ function priceHTML(p){
   const current=currentPrice(p);
   const hasDiscount=Number(p.discount)>0 && save>0;
   return `<div class="price-box">${hasDiscount?`<span class="old-price">মূল মূল্য: <s>${money(base)}</s></span><span class="discount-badge">${money(save)} SAVE</span>`:''}<strong class="current-price">${money(current)}</strong></div>`;
+}
+function productCardOfferBadge(p){
+  // The product grid renders before ALBA_OFFER is initialized later in this file.
+  // Keep offer-badge errors isolated so they can never prevent products from rendering.
+  try {
+    const activeOffer = typeof albaIsOfferActive === "function" && albaIsOfferActive() &&
+      ALBA_OFFER.type === "free_delivery";
+    const eligible = typeof albaIsOfferProductEligible === "function" && albaIsOfferProductEligible(p);
+    return activeOffer && eligible ? '<span class="card-free-delivery">⚡ Free Delivery</span>' : '';
+  } catch (error) {
+    return '';
+  }
+}
+function productCardPriceHTML(p){
+  const base=Number(p.price)||0, save=discountAmount(p), current=currentPrice(p);
+  const hasDiscount=Number(p.discount)>0 && save>0;
+  return `<div class="card-price-area">${hasDiscount?`<span class="card-save-badge">▾ Save ${money(save)}</span>`:''}<div class="card-price-line"><strong class="card-current-price">${money(current)}</strong>${hasDiscount?`<span class="card-old-price"><s>${money(base)}</s></span><span class="card-discount-percent">-${Number(p.discount)}%</span>`:''}</div></div>`;
 }
 function save(){localStorage.setItem("albarakah_cart",JSON.stringify(cart));count()}
 function count(){document.getElementById("cartCount").textContent=cart.reduce((a,b)=>a+b.qty,0)}
@@ -1667,13 +1685,9 @@ function renderFeaturedProducts(){
   };
   const trending=products.filter(p=>isManualFlagEnabled(p,"trending")).slice(0,4);
   const arrivals=products.filter(p=>isManualFlagEnabled(p,"isNew")).reverse().slice(0,4);
-  const cardHTML=(p,label)=>`<article class="product featured-product-card" onclick="openProduct(${p.id})">
-    <div class="pimg"><img src="${p.img}" alt="${p.name}" loading="lazy"><span class="featured-tag">${label}</span></div>
-    <div class="pinfo"><span class="p-cat">${p.cat}</span><h3>${p.name}</h3><p>${p.short||""}</p><div class="product-bottom">
-    <div class="stock-row">${stockStatusHTML(p)}</div>${priceHTML(p)}
-    <div class="product-actions"><button class="add" ${isStockOut(p)?'disabled aria-disabled="true"':''} onclick="event.stopPropagation();${isStockOut(p)?'':'add('+p.id+')'}">🛒 কার্ট +</button>
-    <button class="add order-btn" ${isStockOut(p)?'disabled aria-disabled="true"':''} onclick="event.stopPropagation();${isStockOut(p)?'':'orderNow('+p.id+')'}">⚡ অর্ডার করুন</button></div>
-    </div></div></article>`;
+  const cardHTML=(p,label)=>`<article class="product featured-product-card alba-shop-card" onclick="openProduct(${p.id})">
+    <div class="pimg"><img src="${p.img}" alt="${p.name}" loading="lazy">${Number(p.discount)>0?`<span class="card-discount-ribbon">-${Number(p.discount)}%</span>`:''}<button class="card-zoom-btn" aria-label="পণ্যের বিস্তারিত দেখুন" onclick="event.stopPropagation();openProduct(${p.id})">⌕</button>${productCardOfferBadge(p)}<span class="card-heart" aria-hidden="true">♡</span><span class="featured-tag">${label}</span></div>
+    <div class="pinfo"><h3>${p.name}</h3><div class="product-bottom"><div class="stock-row">${stockStatusHTML(p)}</div><div class="card-price-cart-row">${productCardPriceHTML(p)}<div class="product-actions"><button class="add card-cart-btn" aria-label="কার্টে যোগ করুন" ${isStockOut(p)?'disabled aria-disabled="true"':''} onclick="event.stopPropagation();${isStockOut(p)?'':'add('+p.id+')'}">🛒</button></div></div></div></div></article>`;
   trendingEl.innerHTML=trending.map(p=>cardHTML(p,"🔥 TRENDING")).join("")||"<p>শীঘ্রই জনপ্রিয় পণ্য যুক্ত হবে।</p>";
   arrivalsEl.innerHTML=arrivals.map(p=>cardHTML(p,"✨ NEW ARRIVAL")).join("")||"<p>নতুন পণ্য শীঘ্রই আসছে।</p>";
 }
@@ -1701,15 +1715,11 @@ function renderProducts(){
   const a=products.filter(x=>(active==="সব"||x.cat===active)&&(!q||x.name.toLowerCase().includes(q)||x.cat.toLowerCase().includes(q)||x.short.toLowerCase().includes(q)));
   document.getElementById("productGrid").innerHTML=a.map(x=>{
     const out=isStockOut(x);
-    return `<article class="product ${out?'is-stock-out':''}" onclick="openProduct(${x.id})">
-      <div class="pimg"><img src="${x.img}" alt="${x.name}"><span class="view-badge">${money(discountAmount(x))} SAVE</span></div>
-      <div class="pinfo"><span class="p-cat">${x.cat}</span><h3>${x.name}</h3><p>${x.short}</p><div class="product-bottom">
+    return `<article class="product alba-shop-card ${out?'is-stock-out':''}" onclick="openProduct(${x.id})">
+      <div class="pimg"><img src="${x.img}" alt="${x.name}" loading="lazy">${Number(x.discount)>0?`<span class="card-discount-ribbon">-${Number(x.discount)}%</span>`:''}<button class="card-zoom-btn" aria-label="পণ্যের বিস্তারিত দেখুন" onclick="event.stopPropagation();openProduct(${x.id})">⌕</button>${productCardOfferBadge(x)}<span class="card-heart" aria-hidden="true">♡</span></div>
+      <div class="pinfo"><h3>${x.name}</h3><div class="product-bottom">
         <div class="stock-row">${stockStatusHTML(x)}</div>
-        ${priceHTML(x)}
-        <div class="product-actions">
-          <button class="add" ${out?'disabled aria-disabled="true"':''} onclick="event.stopPropagation();${out?'':'add('+x.id+')'}">🛒 কার্ট +</button>
-          <button class="add order-btn" ${out?'disabled aria-disabled="true"':''} onclick="event.stopPropagation();${out?'':'orderNow('+x.id+')'}">⚡ অর্ডার করুন</button>
-        </div>
+        <div class="card-price-cart-row">${productCardPriceHTML(x)}<div class="product-actions"><button class="add card-cart-btn" aria-label="কার্টে যোগ করুন" ${out?'disabled aria-disabled="true"':''} onclick="event.stopPropagation();${out?'':'add('+x.id+')'}">🛒</button></div></div>
       </div></div>
     </article>`;
   }).join("")||"<p>কোনো পণ্য পাওয়া যায়নি।</p>"
@@ -1726,6 +1736,7 @@ function openProduct(id){
 
   currentProduct=p;
   currentImage=0;
+  productDetailQty=1;
   renderProductModal();
 }
 function closeProduct(e){
@@ -1748,7 +1759,18 @@ function renderProductModal(){
   document.getElementById("modalThumbs").innerHTML=p.images.map((src,i)=>`<button class="thumb-btn ${i===currentImage?'active':''}" onclick="selectProductImage(${i})"><img src="${src}" alt="ছবি ${i+1}"></button>`).join("");
   document.getElementById("modalTitle").textContent=p.name;
   document.getElementById("modalCategory").textContent=p.cat;
-  document.getElementById("modalPrice").innerHTML=priceHTML(p); const modalStock=document.getElementById("modalStockStatus"); if(modalStock) modalStock.innerHTML=stockStatusHTML(p); const modalBtns=document.querySelectorAll("#productModal .modal-actions .btn"); if(modalBtns.length>=2){ modalBtns[0].disabled=isStockOut(p); modalBtns[1].disabled=isStockOut(p); modalBtns[0].setAttribute("aria-disabled",isStockOut(p)); modalBtns[1].setAttribute("aria-disabled",isStockOut(p)); }
+  document.getElementById("modalPrice").innerHTML=priceHTML(p);
+  const modalStock=document.getElementById("modalStockStatus");
+  if(modalStock) modalStock.innerHTML=stockStatusHTML(p);
+  const qtyOutput=document.getElementById("productDetailQty");
+  if(qtyOutput) qtyOutput.textContent=String(productDetailQty);
+  const modalBtns=document.querySelectorAll("#productModal .modal-actions .btn");
+  modalBtns.forEach(btn=>{
+    btn.disabled=isStockOut(p);
+    btn.setAttribute("aria-disabled",String(isStockOut(p)));
+  });
+  const qtyWrap=document.getElementById("productDetailQuantityWrap");
+  if(qtyWrap) qtyWrap.classList.toggle("is-stock-out",isStockOut(p));
   document.getElementById("modalDesc").textContent=p.desc;
   document.getElementById("modalFeatures").innerHTML=p.features.map(f=>`<li>✓ ${f}</li>`).join("");
   renderRelatedProducts();
@@ -1782,42 +1804,38 @@ function renderRelatedProducts(){
   grid.innerHTML=related.map(x=>{
     const out=isStockOut(x);
 
-    return `<article class="product related-product-card ${out?'is-stock-out':''}" onclick="window.location.href='product.html?id=${encodeURIComponent(x.id)}'">
-      <div class="pimg">
-        <img src="${x.img}" alt="${x.name}" loading="lazy">
-        <span class="view-badge">${money(discountAmount(x))} SAVE</span>
-      </div>
-      <div class="pinfo">
-        <span class="p-cat">${x.cat}</span>
-        <h3>${x.name}</h3>
-        <p>${x.short}</p>
-        <div class="product-bottom">
-          <div class="stock-row">${stockStatusHTML(x)}</div>
-          ${priceHTML(x)}
-          <div class="product-actions">
-            <button class="add" ${out?'disabled aria-disabled="true"':''} onclick="event.stopPropagation();${out?'':'add('+x.id+')'}">🛒 কার্ট +</button>
-            <button class="add order-btn" ${out?'disabled aria-disabled="true"':''} onclick="event.stopPropagation();${out?'':'orderNow('+x.id+')'}">⚡ অর্ডার করুন</button>
-          </div>
-        </div>
-      </div>
+    return `<article class="product related-product-card alba-shop-card ${out?'is-stock-out':''}" onclick="window.location.href='product.html?id=${encodeURIComponent(x.id)}'">
+      <div class="pimg"><img src="${x.img}" alt="${x.name}" loading="lazy">${Number(x.discount)>0?`<span class="card-discount-ribbon">-${Number(x.discount)}%</span>`:''}<button class="card-zoom-btn" aria-label="পণ্যের বিস্তারিত দেখুন" onclick="event.stopPropagation();window.location.href='product.html?id=${encodeURIComponent(x.id)}'">⌕</button>${productCardOfferBadge(x)}<span class="card-heart" aria-hidden="true">♡</span></div>
+      <div class="pinfo"><h3>${x.name}</h3><div class="product-bottom">
+        <div class="stock-row">${stockStatusHTML(x)}</div>
+        <div class="card-price-cart-row">${productCardPriceHTML(x)}<div class="product-actions"><button class="add card-cart-btn" aria-label="কার্টে যোগ করুন" ${out?'disabled aria-disabled="true"':''} onclick="event.stopPropagation();${out?'':'add('+x.id+')'}">🛒</button></div></div>
+      </div></div>
     </article>`;
   }).join("");
 }
 function selectProductImage(i){currentImage=i;renderProductModal()}
 function nextProductImage(){if(!currentProduct)return;currentImage=(currentImage+1)%currentProduct.images.length;renderProductModal()}
 function prevProductImage(){if(!currentProduct)return;currentImage=(currentImage-1+currentProduct.images.length)%currentProduct.images.length;renderProductModal()}
-function add(id){
+function changeProductDetailQty(delta){
+  if(!currentProduct || isStockOut(currentProduct)) return;
+  productDetailQty=Math.max(1,Math.min(99,productDetailQty+delta));
+  const output=document.getElementById("productDetailQty");
+  if(output) output.textContent=String(productDetailQty);
+}
+
+function add(id, quantity=1){
   let p=products.find(a=>a.id===id);
   if(!p)return;
 
   let x=cart.find(a=>a.id===id);
 
+  const qty=Math.max(1,parseInt(quantity,10)||1);
   if(x){
-    x.qty++;
+    x.qty+=qty;
   }else{
     cart.push({
       id:id,
-      qty:1
+      qty:qty
     });
   }
 
@@ -1826,7 +1844,7 @@ function add(id){
   openCart();
 }
 
-function orderNow(id){
+function orderNow(id, quantity=1){
   let p=products.find(a=>a.id===id);
 
   if(!p){
@@ -1834,14 +1852,15 @@ function orderNow(id){
     return;
   }
 
+  const qty=Math.max(1,parseInt(quantity,10)||1);
   let x=cart.find(a=>a.id===id);
 
   if(x){
-    x.qty++;
+    x.qty+=qty;
   }else{
     cart.push({
       id:id,
-      qty:1
+      qty:qty
     });
   }
 
