@@ -2633,3 +2633,57 @@ body.product-details-page .header{background:rgba(255,254,250,.9)!important}
   body.product-details-page .product-page .modal-actions .btn{font-size:12px;padding:12px 5px}
   body.product-details-page .product-page .modal-actions .whatsapp-btn{grid-column:1 / -1}
 }
+
+
+/* ===== Optional clothing size/color selectors (only shown when configured per product) ===== */
+.product-variant-options{margin:18px 0 8px;padding:16px;border:1px solid #e2e9e3;border-radius:14px;background:#fbfdfb}
+.variant-group+.variant-group{margin-top:17px}
+.variant-heading-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+.variant-label{font-size:14px;font-weight:800;color:#183e2b}
+.variant-selected-label{font-size:12px;color:#5b6b60;font-weight:700}
+.variant-options-list{display:flex;flex-wrap:wrap;gap:8px}
+.variant-option{min-width:42px;min-height:38px;padding:8px 12px;border:1px solid #d4ddd5;border-radius:9px;background:#fff;color:#24372b;font:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.18s ease}
+.variant-option.active{border-color:#17643e;background:#17643e;color:#fff;box-shadow:0 0 0 2px #17643e1a}
+.variant-option:disabled{opacity:.35;cursor:not-allowed;text-decoration:line-through}
+.color-options-list{align-items:center}
+.color-swatch{width:34px;height:34px;min-width:34px;min-height:34px;padding:0;border-radius:50%;border:2px solid #d7ded8;position:relative}
+.color-swatch.active{outline:2px solid #17643e;outline-offset:3px;border-color:#fff}
+.color-swatch.active:after{content:'✓';position:absolute;inset:0;display:grid;place-items:center;font-size:15px;font-weight:900;text-shadow:0 1px 3px #000;color:#fff}
+.size-chart-button{margin-top:10px;border:0;background:transparent;color:#17643e;font:inherit;font-size:12px;font-weight:800;text-decoration:underline;cursor:pointer;padding:3px 0}
+.variant-stock-message{margin:10px 0 0;font-size:12px;font-weight:700;color:#9b4d16}
+.variant-stock-message:empty{display:none}
+.size-chart-modal{position:relative;width:min(520px,92vw);max-height:85vh;overflow:auto;background:#fff;border-radius:18px;padding:28px;box-shadow:0 20px 70px #0003}
+.size-chart-modal h2{margin:0 35px 18px 0;font-size:22px;color:#173d2a}
+.size-chart-modal table{width:100%;border-collapse:collapse;font-size:13px}
+.size-chart-modal th,.size-chart-modal td{padding:10px 8px;border:1px solid #e0e7e1;text-align:center}
+.size-chart-modal th{background:#f1f7f2;color:#183e2b}
+@media(max-width:520px){.product-variant-options{padding:13px;margin:14px 0 6px}.variant-option{min-width:40px;min-height:36px;padding:7px 10px}.size-chart-modal{padding:22px 16px}}
+
+/* AL-BARAKAH mobile product layout: size/color selectors below stock and above quantity */
+@media (max-width: 850px) {
+  body.product-details-page .product-page .modal-info > #modalStockStatus {
+    order: 4;
+  }
+  body.product-details-page .product-page .modal-info > #productVariantOptions {
+    order: 5;
+    width: 100%;
+  }
+  body.product-details-page .product-page .modal-info > #productDetailQuantityWrap {
+    order: 6;
+  }
+  body.product-details-page .product-page .modal-info > .modal-actions {
+    order: 7;
+  }
+  body.product-details-page .product-page .modal-info > .detail-description-heading {
+    order: 8;
+  }
+  body.product-details-page .product-page .modal-info > #modalDesc {
+    order: 9;
+  }
+  body.product-details-page .product-page .modal-info > .detail-features-heading {
+    order: 10;
+  }
+  body.product-details-page .product-page .modal-info > #modalFeatures {
+    order: 11;
+  }
+}
