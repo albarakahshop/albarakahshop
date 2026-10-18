@@ -202,6 +202,12 @@ const galleryImages=[
       "images/charkul_image_1.webp",
       "images/charkul_image_2.webp",
 	  
+      "images/drop-shoulder-t-shart-1.webp",
+      "images/drop-shoulder-t-shart-2.webp",
+      "images/drop-shoulder-t-shart-3.webp",
+      "images/drop-shoulder-t-shart-4.webp",
+      "images/drop-shoulder-t-shart-5.webp",
+	  
       "images/fiber-paper-1.webp",
       "images/fiber-paper-2.webp",
       "images/fiber-paper-3.webp",
@@ -241,6 +247,42 @@ const products=[
     short:"ইসলামিক ক্যালিগ্রাফি ডিজাইন",
     desc:"আল্লাহু-আকবার ক্যালিগ্রাফি সম্বলিত এই Premium Decorative PVC Lamp ঘরের পরিবেশে একটি শান্ত, মার্জিত ও নান্দনিক আবহ তৈরি করতে পারে। বেডরুম, ড্রয়িংরুম, নামাজের স্থান বা বিশেষ উপহার হিসেবে এটি ব্যবহার করা যায়।",
     features:["Premium PVC body 2mm","আকর্ষণীয় Islamic Calligraphy","সহজেই লাইট পরিবর্তন সুব্বিধা","দেয়ালে ও টেবিলে দুইভাবেই মানিয়ে নেয়","৭ কালার RGB LED light (9wt with 3 mode)","সাইজঃ- ৪.৫ইঞ্চি পাশ এবং উচ্চতা ১১ইঞ্চি","১টি হোল্ডার কনভার্টার","নরম ও সুন্দর lighting effect","ঘর সাজানো ও উপহারের জন্য উপযোগী"]
+  },
+  {
+    id:50,
+	//stock:false,
+	//trending: true,
+	//isNew: true,
+    name:"প্রিমিয়াম ড্রপ শোল্ডার টি-শার্ট",
+    cat:"টি-শার্ট",
+    price:680,
+    discount:35,
+    img:"images/drop-shoulder-t-shart-1.webp",
+    images:[
+      "images/drop-shoulder-t-shart-1.webp",
+      "images/drop-shoulder-t-shart-2.webp",
+      "images/drop-shoulder-t-shart-3.webp",
+      "images/drop-shoulder-t-shart-4.webp",
+      "images/drop-shoulder-t-shart-5.webp"
+    ],
+	sizes: ["M", "L", "XL", "XXL"],
+	showColorSelector: true,
+	colors: [
+	  { name: "লাইট পিংক", color: "#f8c9d5" },
+	  { name: "ডার্ক গ্রিন", color: "#103f34" },
+	  { name: "ক্রিম", color: "#f3eadb" },
+	  { name: "ডার্ক গ্রে", color: "#464646" },
+	  { name: "লাইট ব্লু", color: "#adc8e8" }
+	],
+	sizeChart: [
+	  { "সাইজ": "M", "বুক": "৩৮ ইঞ্চি", "লম্বা": "২৭ ইঞ্চি", "হাতা": "৭.০৪ ইঞ্চি" },
+	  { "সাইজ": "L", "বুক": "৪০ ইঞ্চি", "লম্বা": "২৮ ইঞ্চি", "হাতা": "৭.০৬ ইঞ্চি" },
+	  { "সাইজ": "XL", "বুক": "৪২ ইঞ্চি", "লম্বা": "২৯ ইঞ্চি", "হাতা": "৮.০০ ইঞ্চি" },
+	  { "সাইজ": "XXL", "বুক": "৪৪ ইঞ্চি", "লম্বা": "৩০ ইঞ্চি", "হাতা": "৮.০২ ইঞ্চি" }
+	],
+    short:"স্টাইলিশ লুক, আরামদায়ক ফিটিং!",
+    desc:"স্টাইলিশ লুক, আরামদায়ক ফিটিং! আপনার প্রতিদিনের পোশাকে নিয়ে আসুন আধুনিক ও ট্রেন্ডি লুক। প্রিমিয়াম কটন ফেব্রিক দিয়ে তৈরি এই ড্রপ শোল্ডার টি-শার্ট আপনাকে দেবে স্টাইলিশ আউটলুক ও আরামদায়ক অনুভূতি। সিম্পল এবং আকর্ষণীয় ডিজাইন, প্রিমিয়াম ফ্যাব্রিক এবং ট্রেন্ডি ড্রপ শোল্ডার ফিট—সব মিলিয়ে আপনার স্টাইলকে আরও আকর্ষণীয় করে তুলতে দারুণ একটি পছন্দ।",
+    features:["স্টাইল: ট্রেন্ডি ড্রপ শোল্ডার ডিজাইন","ফেব্রিক: আরামদায়ক কটন","GSM: 220+ — ভারী ও প্রিমিয়াম ফিল","লুক: মডার্ন ও স্টাইলিশ","ব্যবহার: ক্যাজুয়াল আউটিং, বন্ধুদের সঙ্গে ঘোরাঘুরি কিংবা প্রতিদিনের ব্যবহারের জন্য উপযুক্ত।"]
   },
   {
     id:2,
@@ -1232,8 +1274,12 @@ const products=[
 ];
 
 let cart=JSON.parse(localStorage.getItem("albarakah_cart")||"[]"),active="সব";
+// Randomize the all-products view once per page load; category views keep their normal order.
+let allProductsShuffleOrder = null;
 let currentProduct=null,currentImage=0;
 let productDetailQty=1;
+let selectedProductSize="";
+let selectedProductColor="";
 const money=n=>"৳"+Number(n).toLocaleString("bn-BD");
 // ===== PRODUCT PRICE SETTINGS =====
 // প্রতিটি পণ্যে শুধু price (মূল দাম) এবং discount (%) লিখলেই হবে।
@@ -1711,8 +1757,17 @@ function addPremiumTrustAndSupport(){
 }
 
 function renderProducts(){
-  const q=document.getElementById("search").value.toLowerCase().trim();
-  const a=products.filter(x=>(active==="সব"||x.cat===active)&&(!q||x.name.toLowerCase().includes(q)||x.cat.toLowerCase().includes(q)||x.short.toLowerCase().includes(q)));
+  const q=(document.getElementById("search")?.value || "").toLowerCase().trim();
+  // Shuffle all products only for the "সব" view, and keep that order stable while searching.
+  if(active === "সব" && !allProductsShuffleOrder){
+    allProductsShuffleOrder = [...products];
+    for(let i=allProductsShuffleOrder.length-1;i>0;i--){
+      const j=Math.floor(Math.random()*(i+1));
+      [allProductsShuffleOrder[i],allProductsShuffleOrder[j]]=[allProductsShuffleOrder[j],allProductsShuffleOrder[i]];
+    }
+  }
+  const sourceProducts = active === "সব" ? (allProductsShuffleOrder || products) : products.filter(x=>x.cat===active);
+  const a=sourceProducts.filter(x=>(!q||x.name.toLowerCase().includes(q)||x.cat.toLowerCase().includes(q)||x.short.toLowerCase().includes(q)));
   document.getElementById("productGrid").innerHTML=a.map(x=>{
     const out=isStockOut(x);
     return `<article class="product alba-shop-card ${out?'is-stock-out':''}" onclick="openProduct(${x.id})">
@@ -1737,6 +1792,8 @@ function openProduct(id){
   currentProduct=p;
   currentImage=0;
   productDetailQty=1;
+  selectedProductSize="";
+  selectedProductColor="";
   renderProductModal();
 }
 function closeProduct(e){
@@ -1749,6 +1806,91 @@ function closeProduct(e){
     document.body.classList.remove("modal-open");
   }
 }
+function productHasSizes(p){return !!(p && Array.isArray(p.sizes) && p.sizes.length);}
+function productHasColors(p){return !!(p && p.showColorSelector === true && Array.isArray(p.colors) && p.colors.length);}
+function variantForSelection(p, size=selectedProductSize, color=selectedProductColor){
+  if(!p || !Array.isArray(p.variants) || !p.variants.length) return null;
+  return p.variants.find(v => (!productHasSizes(p) || String(v.size||"")===String(size||"")) && (!productHasColors(p) || String(v.color||"")===String(color||""))) || null;
+}
+function isSelectedVariantOutOfStock(p){
+  if(!p || isStockOut(p)) return true;
+  if(!productHasSizes(p) && !productHasColors(p)) return false;
+  const v=variantForSelection(p);
+  if(Array.isArray(p.variants) && p.variants.length) return !v || v.stock===false || Number(v.stock)<=0;
+  return false;
+}
+function variantSelectionReady(p, showAlert=true){
+  if(productHasSizes(p) && !selectedProductSize){if(showAlert)alert("অনুগ্রহ করে আপনার পছন্দের সাইজ নির্বাচন করুন।");return false;}
+  if(productHasColors(p) && !selectedProductColor){if(showAlert)alert("অনুগ্রহ করে আপনার পছন্দের রং নির্বাচন করুন।");return false;}
+  if(isSelectedVariantOutOfStock(p)){if(showAlert)alert("দুঃখিত, নির্বাচিত সাইজ/রংটি বর্তমানে স্টকে নেই। অন্য ভ্যারিয়েন্ট নির্বাচন করুন।");return false;}
+  return true;
+}
+function renderProductVariantOptions(){
+  const p=currentProduct, wrap=document.getElementById("productVariantOptions");
+  if(!p || !wrap)return;
+  const hasSizes=productHasSizes(p), hasColors=productHasColors(p);
+  wrap.style.display=(hasSizes||hasColors)?"":"none";
+  const sizeGroup=document.getElementById("productSizeGroup"), colorGroup=document.getElementById("productColorGroup");
+  if(sizeGroup)sizeGroup.style.display=hasSizes?"":"none";
+  if(colorGroup)colorGroup.style.display=hasColors?"":"none";
+  if(hasSizes && !p.sizes.includes(selectedProductSize))selectedProductSize="";
+  if(hasColors && !p.colors.some(c=>(typeof c==="string"?c:c.name)===selectedProductColor))selectedProductColor="";
+  const sizeOptions=document.getElementById("productSizeOptions");
+  if(sizeOptions && hasSizes){
+    sizeOptions.innerHTML=p.sizes.map(size=>{
+      const unavailable=Array.isArray(p.variants)&&p.variants.length&&hasColors&&selectedProductColor ? !p.variants.some(v=>String(v.size)===String(size)&&String(v.color)===String(selectedProductColor)&&v.stock!==false&&(v.stock==null||Number(v.stock)>0)) : Array.isArray(p.variants)&&p.variants.length&&!hasColors ? !p.variants.some(v=>String(v.size)===String(size)&&v.stock!==false&&(v.stock==null||Number(v.stock)>0)) : false;
+      return `<button type="button" class="variant-option ${selectedProductSize===String(size)?'active':''}" ${unavailable?'disabled':''} onclick='selectProductSize(${JSON.stringify(String(size))})'>${size}</button>`;
+    }).join("");
+  }
+  const colorOptions=document.getElementById("productColorOptions");
+  if(colorOptions && hasColors){
+    colorOptions.innerHTML=p.colors.map(item=>{
+      const c=typeof item==="string"?{name:item,color:item}:item;
+      const unavailable=Array.isArray(p.variants)&&p.variants.length&&hasSizes&&selectedProductSize ? !p.variants.some(v=>String(v.color)===String(c.name)&&String(v.size)===String(selectedProductSize)&&v.stock!==false&&(v.stock==null||Number(v.stock)>0)) : Array.isArray(p.variants)&&p.variants.length&&!hasSizes ? !p.variants.some(v=>String(v.color)===String(c.name)&&v.stock!==false&&(v.stock==null||Number(v.stock)>0)) : false;
+      const isHex=/^#[0-9a-f]{3,8}$/i.test(c.color||"");
+      return `<button type="button" class="variant-option color-swatch ${selectedProductColor===String(c.name)?'active':''}" style="background:${isHex?c.color:'#ffffff'}" title="${c.name}" aria-label="${c.name}" ${unavailable?'disabled':''} onclick='selectProductColor(${JSON.stringify(String(c.name))})'></button>`;
+    }).join("");
+  }
+  const sizeLabel=document.getElementById("selectedSizeLabel");if(sizeLabel)sizeLabel.textContent=selectedProductSize?"নির্বাচিত: "+selectedProductSize:"";
+  const colorLabel=document.getElementById("selectedColorLabel");if(colorLabel)colorLabel.textContent=selectedProductColor?"নির্বাচিত: "+selectedProductColor:"";
+  const chartBtn=document.getElementById("sizeChartButton");if(chartBtn)chartBtn.style.display=hasSizes&&p.sizeChart?"":"none";
+  const msg=document.getElementById("variantStockMessage");
+  if(msg){const chosen=(hasSizes?!!selectedProductSize:true)&&(hasColors?!!selectedProductColor:true);msg.textContent=chosen&&isSelectedVariantOutOfStock(p)?"এই সাইজ/রংটি বর্তমানে স্টকে নেই।":"";}
+  const buttons=document.querySelectorAll("#productModal .modal-actions .btn");
+  buttons.forEach(btn=>{const unavailable=isStockOut(p)||((hasSizes||hasColors)&&isSelectedVariantOutOfStock(p));btn.disabled=unavailable;btn.setAttribute("aria-disabled",String(unavailable));});
+}
+function selectProductSize(size){selectedProductSize=String(size);renderProductVariantOptions();}
+function selectProductColor(color){selectedProductColor=String(color);renderProductVariantOptions();}
+function openSizeChart(){
+  if(!currentProduct||!currentProduct.sizeChart)return;
+  const title=document.getElementById("sizeChartTitle"), content=document.getElementById("sizeChartContent");
+  if(title)title.textContent=currentProduct.name+" — সাইজ চার্ট";
+  if(content){
+    if(Array.isArray(currentProduct.sizeChart)){
+      const rows=currentProduct.sizeChart;
+      content.innerHTML=`<table><thead><tr>${Object.keys(rows[0]||{}).map(k=>`<th>${k}</th>`).join("")}</tr></thead><tbody>${rows.map(row=>`<tr>${Object.values(row).map(v=>`<td>${v}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
+    }else content.innerHTML=String(currentProduct.sizeChart);
+  }
+  document.getElementById("sizeChartOverlay")?.classList.add("show");
+}
+function closeSizeChart(e){if(e&&e.target&&e.target.id!=="sizeChartOverlay")return;document.getElementById("sizeChartOverlay")?.classList.remove("show");}
+function cartVariantLabel(x){return [x.size?"সাইজ: "+x.size:"",x.color?"রং: "+x.color:""].filter(Boolean).join(" • ");}
+function cartItemKey(x){return [x.id,x.size||"",x.color||""].join("::");}
+function addCartVariant(id, quantity=1, mode="add"){
+  const p=products.find(a=>a.id===id);if(!p)return;
+  if((productHasSizes(p)||productHasColors(p)) && (!IS_PRODUCT_PAGE || currentProduct?.id!==id)){
+    window.location.href="product.html?id="+encodeURIComponent(id);return;
+  }
+  if(!variantSelectionReady(p))return;
+  const size=productHasSizes(p)?selectedProductSize:"", color=productHasColors(p)?selectedProductColor:"";
+  const qty=Math.max(1,parseInt(quantity,10)||1);
+  let x=cart.find(a=>cartItemKey(a)===cartItemKey({id,size,color}));
+  if(x)x.qty+=qty;else cart.push({id,qty,size,color});
+  save();renderCart();
+  if(mode==="order"&&!IS_PRODUCT_PAGE)closeProduct();
+  openCart();
+}
+
 function renderProductModal(){
   if(!currentProduct)return;
   const p=currentProduct;
@@ -1760,14 +1902,16 @@ function renderProductModal(){
   document.getElementById("modalTitle").textContent=p.name;
   document.getElementById("modalCategory").textContent=p.cat;
   document.getElementById("modalPrice").innerHTML=priceHTML(p);
+  renderProductVariantOptions();
   const modalStock=document.getElementById("modalStockStatus");
   if(modalStock) modalStock.innerHTML=stockStatusHTML(p);
   const qtyOutput=document.getElementById("productDetailQty");
   if(qtyOutput) qtyOutput.textContent=String(productDetailQty);
   const modalBtns=document.querySelectorAll("#productModal .modal-actions .btn");
   modalBtns.forEach(btn=>{
-    btn.disabled=isStockOut(p);
-    btn.setAttribute("aria-disabled",String(isStockOut(p)));
+    const unavailable=isStockOut(p)||((productHasSizes(p)||productHasColors(p))&&isSelectedVariantOutOfStock(p));
+    btn.disabled=unavailable;
+    btn.setAttribute("aria-disabled",String(unavailable));
   });
   const qtyWrap=document.getElementById("productDetailQuantityWrap");
   if(qtyWrap) qtyWrap.classList.toggle("is-stock-out",isStockOut(p));
@@ -1824,54 +1968,28 @@ function changeProductDetailQty(delta){
 }
 
 function add(id, quantity=1){
-  let p=products.find(a=>a.id===id);
-  if(!p)return;
-
-  let x=cart.find(a=>a.id===id);
-
-  const qty=Math.max(1,parseInt(quantity,10)||1);
-  if(x){
-    x.qty+=qty;
-  }else{
-    cart.push({
-      id:id,
-      qty:qty
-    });
+  const p=products.find(a=>a.id===id);if(!p)return;
+  if(productHasSizes(p)||productHasColors(p)){
+    if(!IS_PRODUCT_PAGE || currentProduct?.id!==id){window.location.href="product.html?id="+encodeURIComponent(id);return;}
+    return addCartVariant(id,quantity,"add");
   }
-
-  save();
-  renderCart();
-  openCart();
+  let x=cart.find(a=>a.id===id&&!a.size&&!a.color);
+  const qty=Math.max(1,parseInt(quantity,10)||1);
+  if(x)x.qty+=qty;else cart.push({id:id,qty:qty,size:"",color:""});
+  save();renderCart();openCart();
 }
 
 function orderNow(id, quantity=1){
-  let p=products.find(a=>a.id===id);
-
-  if(!p){
-    alert("পণ্যটি পাওয়া যাচ্ছে না।");
-    return;
+  const p=products.find(a=>a.id===id);
+  if(!p){alert("পণ্যটি পাওয়া যাচ্ছে না।");return;}
+  if(productHasSizes(p)||productHasColors(p)){
+    if(!IS_PRODUCT_PAGE || currentProduct?.id!==id){window.location.href="product.html?id="+encodeURIComponent(id);return;}
+    return addCartVariant(id,quantity,"order");
   }
-
+  let x=cart.find(a=>a.id===id&&!a.size&&!a.color);
   const qty=Math.max(1,parseInt(quantity,10)||1);
-  let x=cart.find(a=>a.id===id);
-
-  if(x){
-    x.qty+=qty;
-  }else{
-    cart.push({
-      id:id,
-      qty:qty
-    });
-  }
-
-  save();
-  renderCart();
-
-  if(!IS_PRODUCT_PAGE){
-    closeProduct();
-  }
-
-  openCart();
+  if(x)x.qty+=qty;else cart.push({id:id,qty:qty,size:"",color:""});
+  save();renderCart();if(!IS_PRODUCT_PAGE)closeProduct();openCart();
 }
 
 function total(){
@@ -1880,9 +1998,11 @@ function total(){
     return s+(p?currentPrice(p)*x.qty:0);
   },0);
 }
-function change(id,d){let x=cart.find(a=>a.id===id);if(!x)return;x.qty+=d;if(x.qty<1)cart=cart.filter(a=>a.id!==id);save();renderCart();renderCheckout()}
-function renderCart(){let e=document.getElementById("cartItems");if(!cart.length){e.innerHTML="<p style='color:#888'>কার্ট খালি।</p>";document.getElementById("cartTotal").textContent=money(0);return}e.innerHTML=cart.map(x=>{let p=products.find(a=>a.id===x.id);if(!p)return "";return `<div class="cart-row"><div class="thumb"><img src="${p.img}"></div><div><h4>${p.name}</h4><small>${money(currentPrice(p))}</small><div class="qty"><button onclick="change(${p.id},-1)">−</button><b>${x.qty}</b><button onclick="change(${p.id},1)">+</button></div></div><button class="remove" onclick="removeItem(${p.id})">✕</button></div>`}).join("");document.getElementById("cartTotal").textContent=money(total())}
+function change(id,d){let x=cart.find(a=>a.id===id&&!a.size&&!a.color);if(!x)return;x.qty+=d;if(x.qty<1)cart=cart.filter(a=>a!==x);save();renderCart();renderCheckout()}
+function changeCartItem(index,d){const x=cart[index];if(!x)return;x.qty+=d;if(x.qty<1)cart.splice(index,1);save();renderCart();renderCheckout()}
 function removeItem(id){cart=cart.filter(x=>x.id!==id);save();renderCart();renderCheckout()}
+function removeCartItem(index){if(index<0||index>=cart.length)return;cart.splice(index,1);save();renderCart();renderCheckout()}
+function renderCart(){let e=document.getElementById("cartItems");if(!e)return;if(!cart.length){e.innerHTML="<p style='color:#888'>কার্ট খালি।</p>";document.getElementById("cartTotal").textContent=money(0);return}e.innerHTML=cart.map((x,i)=>{let p=products.find(a=>a.id===x.id);if(!p)return "";const variant=cartVariantLabel(x);return `<div class="cart-row"><div class="thumb"><img src="${p.img}"></div><div><h4>${p.name}</h4>${variant?`<small class="cart-variant-label">${variant}</small><br>`:''}<small>${money(currentPrice(p))}</small><div class="qty"><button onclick="changeCartItem(${i},-1)">−</button><b>${x.qty}</b><button onclick="changeCartItem(${i},1)">+</button></div></div><button class="remove" onclick="removeCartItem(${i})">✕</button></div>`}).join("");document.getElementById("cartTotal").textContent=money(total())}
 function openCart(){
   document.getElementById("cartOverlay").classList.add("show");
   renderCart();
@@ -2044,11 +2164,12 @@ function renderCheckout(){
           a => a.id === x.id
         );
 
+      const variantLabel = cartVariantLabel(x);
       return p
         ? `
           <div>
             <span>
-              ${p.name} × ${x.qty}
+              ${p.name}${variantLabel ? ` (${variantLabel})` : ""} × ${x.qty}
             </span>
 
             <b>
@@ -2215,6 +2336,9 @@ async function placeOrder(ev){
       id: p?.id || x.id,
       name: p?.name || "Unknown Product",
       category: p?.cat || "",
+      size: x.size || "",
+      color: x.color || "",
+      variant: cartVariantLabel(x),
       qty: x.qty,
       unitPrice: Number(p ? currentPrice(p) : 0),
       lineTotal: Number(p ? currentPrice(p) * x.qty : 0)
