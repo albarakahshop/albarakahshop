@@ -97,6 +97,19 @@
       <h2 id="modalTitle"></h2>
       <div id="modalPrice" class="modal-price"></div>
       <div id="modalStockStatus" class="modal-stock-status"></div>
+      <!-- Optional clothing variant controls. Hidden automatically for products without sizes/colors. -->
+      <div id="productVariantOptions" class="product-variant-options" style="display:none">
+        <div id="productSizeGroup" class="variant-group" style="display:none">
+          <div class="variant-heading-row"><span class="variant-label">সাইজ নির্বাচন করুন</span><span id="selectedSizeLabel" class="variant-selected-label"></span></div>
+          <div id="productSizeOptions" class="variant-options-list"></div>
+          <button id="sizeChartButton" type="button" class="size-chart-button" style="display:none" onclick="openSizeChart()">📏 সাইজ চার্ট দেখুন</button>
+        </div>
+        <div id="productColorGroup" class="variant-group" style="display:none">
+          <div class="variant-heading-row"><span class="variant-label">রং নির্বাচন করুন</span><span id="selectedColorLabel" class="variant-selected-label"></span></div>
+          <div id="productColorOptions" class="variant-options-list color-options-list"></div>
+        </div>
+        <p id="variantStockMessage" class="variant-stock-message" aria-live="polite"></p>
+      </div>
       <div class="product-detail-quantity" id="productDetailQuantityWrap" aria-label="পণ্যের পরিমাণ">
         <span class="product-detail-quantity-label">পরিমাণ</span>
         <div class="product-detail-quantity-control">
@@ -110,9 +123,9 @@
       <div class="detail-heading detail-features-heading">বিশেষ বৈশিষ্ট্য</div>
       <ul id="modalFeatures" class="feature-list"></ul>
       <div class="modal-actions">
-        <button class="btn ghost" onclick="add(currentProduct.id);if(!IS_PRODUCT_PAGE)closeProduct()">🛒 কার্টে যোগ করুন</button>
-        <button class="btn primary" onclick="orderNow(currentProduct.id)">এখনই অর্ডার করুন</button>
-        <button class="btn whatsapp-btn" onclick="if(currentProduct){window.open('https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent('আমি এই পণ্যটি সম্পর্কে জানতে চাই: '+currentProduct.name+' — '+money(currentPrice(currentProduct))),'_blank')}">💬 WhatsApp</button>
+        <button class="btn ghost" onclick="add(currentProduct.id,productDetailQty);if(!IS_PRODUCT_PAGE)closeProduct()">🛒 কার্টে যোগ করুন</button>
+        <button class="btn primary" onclick="orderNow(currentProduct.id,productDetailQty)">⚡ এখনই অর্ডার করুন</button>
+        <button class="btn whatsapp-btn" onclick="if(currentProduct){const variant=[selectedProductSize?'সাইজ: '+selectedProductSize:'',selectedProductColor?'রং: '+selectedProductColor:''].filter(Boolean).join(' • ');window.open('https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent('আমি এই পণ্যটি সম্পর্কে জানতে চাই: '+currentProduct.name+(variant?' ('+variant+')':'')+' — '+money(currentPrice(currentProduct))),'_blank')}">💬 WhatsApp</button>
       </div>
     </div>
   </section>
@@ -198,6 +211,14 @@
    <button class="btn primary full business-submit" type="submit">📨 অনুরোধ পাঠান</button>
   </form>
  </div>
+</div>
+
+<div id="sizeChartOverlay" class="overlay size-chart-overlay" onclick="closeSizeChart(event)">
+  <div class="size-chart-modal" onclick="event.stopPropagation()">
+    <button class="modal-close" type="button" onclick="closeSizeChart()">✕</button>
+    <h2 id="sizeChartTitle">সাইজ চার্ট</h2>
+    <div id="sizeChartContent"></div>
+  </div>
 </div>
 
 <div id="cartOverlay" class="overlay" onclick="closeCart(event)"><aside class="drawer" onclick="event.stopPropagation()">
