@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon" href="images/logo.webp">
 <!-- Browser Theme Color -->
 <meta name="theme-color" content="#123D2B">
-  
+
 <meta name="description" content="AL-BARAKAH Product Details">
 <link rel="stylesheet" href="style.css">
 <script>
@@ -97,13 +97,21 @@
       <h2 id="modalTitle"></h2>
       <div id="modalPrice" class="modal-price"></div>
       <div id="modalStockStatus" class="modal-stock-status"></div>
-      <div class="detail-heading">পণ্যের বিস্তারিত</div>
+      <div class="product-detail-quantity" id="productDetailQuantityWrap" aria-label="পণ্যের পরিমাণ">
+        <span class="product-detail-quantity-label">পরিমাণ</span>
+        <div class="product-detail-quantity-control">
+          <button type="button" onclick="changeProductDetailQty(-1)" aria-label="পরিমাণ কমান">−</button>
+          <output id="productDetailQty" aria-live="polite">1</output>
+          <button type="button" onclick="changeProductDetailQty(1)" aria-label="পরিমাণ বাড়ান">+</button>
+        </div>
+      </div>
+      <div class="detail-heading detail-description-heading">পণ্যের বিস্তারিত</div>
       <p id="modalDesc" class="modal-desc"></p>
-      <div class="detail-heading">বিশেষ বৈশিষ্ট্য</div>
+      <div class="detail-heading detail-features-heading">বিশেষ বৈশিষ্ট্য</div>
       <ul id="modalFeatures" class="feature-list"></ul>
       <div class="modal-actions">
         <button class="btn ghost" onclick="add(currentProduct.id);if(!IS_PRODUCT_PAGE)closeProduct()">🛒 কার্টে যোগ করুন</button>
-        <button class="btn primary" onclick="orderNow(currentProduct.id)">⚡ অর্ডার করুন</button>
+        <button class="btn primary" onclick="orderNow(currentProduct.id)">এখনই অর্ডার করুন</button>
         <button class="btn whatsapp-btn" onclick="if(currentProduct){window.open('https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent('আমি এই পণ্যটি সম্পর্কে জানতে চাই: '+currentProduct.name+' — '+money(currentPrice(currentProduct))),'_blank')}">💬 WhatsApp</button>
       </div>
     </div>
