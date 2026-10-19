@@ -208,6 +208,30 @@ const galleryImages=[
       "images/drop-shoulder-t-shart-4.webp",
       "images/drop-shoulder-t-shart-5.webp",
 	  
+      "images/afgani-tupi-1.webp",
+      "images/afgani-tupi-2.webp",
+      "images/afgani-tupi-3.webp",
+      "images/afgani-tupi-4.webp",
+      "images/afgani-tupi-5.webp",
+	  
+      "images/premium-regular-fit-hoodie-1.webp",
+      "images/premium-regular-fit-hoodie-2.webp",
+      "images/premium-regular-fit-hoodie-3.webp",
+      "images/premium-regular-fit-hoodie-4.webp",
+      "images/premium-regular-fit-hoodie-5.webp",
+	  
+      "images/premium-drop-shoulder-hoodie-1.webp",
+      "images/premium-drop-shoulder-hoodie-2.webp",
+      "images/premium-drop-shoulder-hoodie-3.webp",
+      "images/premium-drop-shoulder-hoodie-4.webp",
+      "images/premium-drop-shoulder-hoodie-5.webp",
+	  
+      "images/the-army-of-mehdi-t-shirt-1.webp",
+      "images/the-army-of-mehdi-t-shirt-2.webp",
+      "images/the-army-of-mehdi-t-shirt-3.webp",
+      "images/the-army-of-mehdi-t-shirt-4.webp",
+      "images/the-army-of-mehdi-t-shirt-5.webp",
+	  
       "images/fiber-paper-1.webp",
       "images/fiber-paper-2.webp",
       "images/fiber-paper-3.webp",
@@ -247,42 +271,6 @@ const products=[
     short:"ইসলামিক ক্যালিগ্রাফি ডিজাইন",
     desc:"আল্লাহু-আকবার ক্যালিগ্রাফি সম্বলিত এই Premium Decorative PVC Lamp ঘরের পরিবেশে একটি শান্ত, মার্জিত ও নান্দনিক আবহ তৈরি করতে পারে। বেডরুম, ড্রয়িংরুম, নামাজের স্থান বা বিশেষ উপহার হিসেবে এটি ব্যবহার করা যায়।",
     features:["Premium PVC body 2mm","আকর্ষণীয় Islamic Calligraphy","সহজেই লাইট পরিবর্তন সুব্বিধা","দেয়ালে ও টেবিলে দুইভাবেই মানিয়ে নেয়","৭ কালার RGB LED light (9wt with 3 mode)","সাইজঃ- ৪.৫ইঞ্চি পাশ এবং উচ্চতা ১১ইঞ্চি","১টি হোল্ডার কনভার্টার","নরম ও সুন্দর lighting effect","ঘর সাজানো ও উপহারের জন্য উপযোগী"]
-  },
-  {
-    id:50,
-	//stock:false,
-	//trending: true,
-	//isNew: true,
-    name:"প্রিমিয়াম ড্রপ শোল্ডার টি-শার্ট",
-    cat:"টি-শার্ট",
-    price:680,
-    discount:35,
-    img:"images/drop-shoulder-t-shart-1.webp",
-    images:[
-      "images/drop-shoulder-t-shart-1.webp",
-      "images/drop-shoulder-t-shart-2.webp",
-      "images/drop-shoulder-t-shart-3.webp",
-      "images/drop-shoulder-t-shart-4.webp",
-      "images/drop-shoulder-t-shart-5.webp"
-    ],
-	sizes: ["M", "L", "XL", "XXL"],
-	showColorSelector: true,
-	colors: [
-	  { name: "লাইট পিংক", color: "#f8c9d5" },
-	  { name: "ডার্ক গ্রিন", color: "#103f34" },
-	  { name: "ক্রিম", color: "#f3eadb" },
-	  { name: "ডার্ক গ্রে", color: "#464646" },
-	  { name: "লাইট ব্লু", color: "#adc8e8" }
-	],
-	sizeChart: [
-	  { "সাইজ": "M", "বুক": "৩৮ ইঞ্চি", "লম্বা": "২৭ ইঞ্চি", "হাতা": "৭.০৪ ইঞ্চি" },
-	  { "সাইজ": "L", "বুক": "৪০ ইঞ্চি", "লম্বা": "২৮ ইঞ্চি", "হাতা": "৭.০৬ ইঞ্চি" },
-	  { "সাইজ": "XL", "বুক": "৪২ ইঞ্চি", "লম্বা": "২৯ ইঞ্চি", "হাতা": "৮.০০ ইঞ্চি" },
-	  { "সাইজ": "XXL", "বুক": "৪৪ ইঞ্চি", "লম্বা": "৩০ ইঞ্চি", "হাতা": "৮.০২ ইঞ্চি" }
-	],
-    short:"স্টাইলিশ লুক, আরামদায়ক ফিটিং!",
-    desc:"স্টাইলিশ লুক, আরামদায়ক ফিটিং! আপনার প্রতিদিনের পোশাকে নিয়ে আসুন আধুনিক ও ট্রেন্ডি লুক। প্রিমিয়াম কটন ফেব্রিক দিয়ে তৈরি এই ড্রপ শোল্ডার টি-শার্ট আপনাকে দেবে স্টাইলিশ আউটলুক ও আরামদায়ক অনুভূতি। সিম্পল এবং আকর্ষণীয় ডিজাইন, প্রিমিয়াম ফ্যাব্রিক এবং ট্রেন্ডি ড্রপ শোল্ডার ফিট—সব মিলিয়ে আপনার স্টাইলকে আরও আকর্ষণীয় করে তুলতে দারুণ একটি পছন্দ।",
-    features:["স্টাইল: ট্রেন্ডি ড্রপ শোল্ডার ডিজাইন","ফেব্রিক: আরামদায়ক কটন","GSM: 220+ — ভারী ও প্রিমিয়াম ফিল","লুক: মডার্ন ও স্টাইলিশ","ব্যবহার: ক্যাজুয়াল আউটিং, বন্ধুদের সঙ্গে ঘোরাঘুরি কিংবা প্রতিদিনের ব্যবহারের জন্য উপযুক্ত।"]
   },
   {
     id:2,
@@ -1270,6 +1258,175 @@ const products=[
     short:"ইসলামিক হ্যান্ডমেড রিচার্জেবল চার কুল টেবিল ল্যাম্প",
     desc:"PVC পাইপ দিয়ে সম্পূর্ণ হাতে তৈরি একটি ইউনিক ও আকর্ষণীয় Rechargeable Islamic Decorative Light। সুন্দর কারুকাজের মাধ্যমে এতে “আল্লাহু-আকবার” এবং চারটি নির্বাচিত সূরা—সূরা আল-কাফিরুন, সূরা আল-ইখলাস, সূরা আল-ফালাক ও সূরা আন-নাস অর্থাৎ চার ক্বুল ফুটিয়ে তোলা হয়েছে। এতে রয়েছে 2000mAh Lithium Battery এবং আকর্ষণীয় RGB Light। সঙ্গে থাকা রিমোট কন্ট্রোলের মাধ্যমে প্রয়োজন ও পছন্দ অনুযায়ী সহজেই লাইটের কালার পরিবর্তন করার সুবিধা। চার্জিংয়ের জন্য রয়েছে Type-C Charging Port। Type-C সম্বলিত যেকোনো মোবাইল চার্জার ব্যবহার করে সহজেই চার্জ দেওয়া যাবে। একবার ফুল চার্জ করলে এটি প্রায় একটানা ৩ থেকে ৪ দিন পর্যন্ত ব্যবহার করা যাবে। ব্যাটারি ব্যাকআপ ব্যবহারের সময়, উজ্জ্বলতা ও লাইট মোডের ওপর নির্ভর করে কিছুটা কম-বেশি হতে পারে।",
     features:["Premium PVC pipe 2mm","আকর্ষণীয় Islamic Calligraphy","Height: 7 Inches","Width: 5 Inches","Battery: 2000mAh Lithium Battery","Lighting: RGB Multi-Color Light","Remote Control: রিমোটের মাধ্যমে লাইটের কালার পরিবর্তনের সুবিধা","Charging Port: Type-C (মোবাইল চার্জার দিয়ে সহজে চার্জ করার সুবিধা)","Battery Backup: এক চার্জে প্রায় একটানা ৩ থেকে ৪ দিন পর্যন্ত ব্যবহারযোগ্য","Design: “Allahuakbar” & 4 Surahs –  (চার ক্বুল)","Suitable for: Bedroom, Living Room, Office, Islamic Decoration & Gift","হাতে তৈরি • রিচার্জেবল • RGB লাইট • রিমোট কন্ট্রোল • Type-C চার্জিং • ইউনিক ইসলামিক ডিজাইন "]
+  },
+  {
+    id:49,
+	//stock:false,
+	//trending: true,
+	//isNew: true,
+    name:"Premium Regular Fit Hoodie for Men | প্রিমিয়াম শীতের হুডি",
+    cat:"মেনস ফ্যাশন",
+    price:800,
+    discount:30,
+    img:"images/premium-regular-fit-hoodie-2.webp",
+    images:[
+      "images/premium-regular-fit-hoodie-2.webp",
+      "images/premium-regular-fit-hoodie-1.webp",
+      "images/premium-regular-fit-hoodie-3.webp",
+      "images/premium-regular-fit-hoodie-4.webp",
+      "images/premium-regular-fit-hoodie-5.webp"
+    ],
+	sizes: ["L", "XL", "XXL"],
+	showColorSelector: true,
+	colors: [
+	  { name: "নেভি ব্লু", color: "#343346" },
+	  { name: "বেইজ", color: "#ceb9ac" },
+	  { name: "অফ-হোয়াইট", color: "#f2eae3" },
+	  { name: "অ্যাশ গ্রে", color: "#b4b4b4" },
+	  { name: "চকলেট ব্রাউন", color: "#8c5338" }
+	],
+	sizeChart: [
+	  { "সাইজ": "L", "বুক": "৪০ ইঞ্চি", "লম্বা": "২৮ ইঞ্চি" },
+	  { "সাইজ": "XL", "বুক": "৪২ ইঞ্চি", "লম্বা": "২৯ ইঞ্চি" },
+	  { "সাইজ": "XXL", "বুক": "৪৪ ইঞ্চি", "লম্বা": "৩০ ইঞ্চি" }
+	],
+    short:"Premium Regular Fit Hoodie — আরাম, স্টাইল ও প্রিমিয়াম লুকের পারফেক্ট কম্বিনেশন! 🧥",
+    desc:"Premium Regular Fit Hoodie — আরাম, স্টাইল ও প্রিমিয়াম লুকের পারফেক্ট কম্বিনেশন! 🧥 শীতের ফ্যাশনে নিজের স্টাইলকে আরও আকর্ষণীয় করে তুলতে বেছে নিন আমাদের Premium Regular Fit Hoodie (GSM 350+)। মিনিমাল ডিজাইন, আরামদায়ক হুড এবং সামনে ব্যবহারিক ক্যাঙ্গারু পকেটসহ এই হুডিটি আপনার দৈনন্দিন পোশাকে যোগ করবে আধুনিক ও স্টাইলিশ লুক। এর 350+ GSM ফেব্রিক হুডিটিকে দেয় ভারী ও প্রিমিয়াম অনুভূতি। ক্যাজুয়াল আউটিং, বন্ধুদের সঙ্গে ঘোরাঘুরি, ভ্রমণ কিংবা প্রতিদিনের ব্যবহারের জন্য এটি হতে পারে আপনার শীতকালীন পোশাকের দারুণ একটি পছন্দ। আপনি যদি ভারী ফেব্রিক, সিম্পল ডিজাইন এবং দৈনন্দিন ব্যবহারের উপযোগী একটি স্টাইলিশ হুডি খুঁজে থাকেন, তাহলে Premium Regular Fit Hoodie হতে পারে আপনার পছন্দের তালিকায়। নিজের জন্য অথবা প্রিয়জনকে উপহার দিতে বেছে নিন আপনার পছন্দের রং ও সাইজ। অর্ডার করুন AL-BARAKAH SHOP থেকে এবং শীতের ফ্যাশনে যোগ করুন নতুন মাত্রা!",
+    features:["প্রিমিয়াম ফেব্রিক: 350+ GSM-এর ভারী ফেব্রিক।","Regular Fit: স্বাভাবিক ও আরামদায়ক ফিটিং।","শীতকালীন পোশাক: শীতের দিনে আরামদায়ক পোশাক হিসেবে উপযোগী।","মিনিমাল ডিজাইন: সিম্পল, স্মার্ট ও আধুনিক লুক।","ক্যাঙ্গারু পকেট: ছোটখাটো প্রয়োজনীয় জিনিস রাখার সুবিধাজনক পকেট।","কমফোর্টেবল হুড: স্টাইলের পাশাপাশি অতিরিক্ত কভারেজ।","সহজে ম্যাচিং: জিন্স, জগারস ও ক্যাজুয়াল প্যান্টের সঙ্গে মানানসই।"]
+  },
+  {
+    id:50,
+	//stock:false,
+	//trending: true,
+	//isNew: true,
+    name:"Premium Drop Shoulder Hoodie for Men | 350+ GSM Heavyweight Hoodie",
+    cat:"মেনস ফ্যাশন",
+    price:900,
+    discount:28,
+    img:"images/premium-drop-shoulder-hoodie-1.webp",
+    images:[
+      "images/premium-drop-shoulder-hoodie-1.webp",
+      "images/premium-drop-shoulder-hoodie-2.webp",
+      "images/premium-drop-shoulder-hoodie-3.webp",
+      "images/premium-drop-shoulder-hoodie-4.webp",
+      "images/premium-drop-shoulder-hoodie-5.webp"
+    ],
+	sizes: ["L", "XL", "XXL"],
+	showColorSelector: true,
+	colors: [
+	  { name: "বারগান্ডি", color: "#5b202d" },
+	  { name: "সাদা", color: "#ffffff" },
+	  { name: "ডার্ক গ্রিন", color: "#0c6353" },
+	  { name: "জেট ব্ল্যাক", color: "#252525" },
+	  { name: "বেবি পিঙ্ক", color: "#e0b1bc" }
+	],
+	sizeChart: [
+	  { "সাইজ": "L", "বুক": "৪০ ইঞ্চি", "লম্বা": "২৮ ইঞ্চি" },
+	  { "সাইজ": "XL", "বুক": "৪২ ইঞ্চি", "লম্বা": "২৯ ইঞ্চি" },
+	  { "সাইজ": "XXL", "বুক": "৪৪ ইঞ্চি", "লম্বা": "৩০ ইঞ্চি" }
+	],
+    short:"Premium Drop Shoulder Hoodie — স্টাইলে প্রিমিয়াম, আরামে অসাধারণ!",
+    desc:"Premium Drop Shoulder Hoodie — স্টাইলে প্রিমিয়াম, আরামে অসাধারণ! শীতের ফ্যাশনে নিয়ে আসুন আধুনিক স্ট্রিটওয়্যারের ছোঁয়া! Premium Drop Shoulder Hoodie (350+ GSM) তৈরি করা হয়েছে তাদের জন্য, যারা পছন্দ করেন ওভারসাইজড লুক, আরামদায়ক পোশাক এবং ট্রেন্ডি ফ্যাশন। এর Drop Shoulder ডিজাইন আপনার লুকে যোগ করবে স্মার্ট ও আধুনিক স্টাইল। অন্যদিকে, 350+ GSM Heavyweight ফেব্রিক হুডিটিকে দেয় ভারী ও প্রিমিয়াম অনুভূতি। মিনিমাল ডিজাইন, আরামদায়ক হুড এবং সামনের ক্যাঙ্গারু পকেট—সব মিলিয়ে এটি হতে পারে আপনার শীতকালীন পোশাকের সংগ্রহে দারুণ একটি সংযোজন। ক্যাজুয়াল আউটিং, বন্ধুদের সঙ্গে ঘোরাঘুরি, ভ্রমণ কিংবা প্রতিদিনের ব্যবহারে জিন্স ও জগারসের সঙ্গে সহজেই মানিয়ে নিতে পারবেন এই স্টাইলিশ হুডি। 👕 কাদের জন্য উপযুক্ত?- যারা স্ট্রিটওয়্যার, আধুনিক ক্যাজুয়াল ফ্যাশন এবং Drop Shoulder ডিজাইনের হুডি পছন্দ করেন, তাদের জন্য এটি দারুণ একটি পছন্দ। নিজের স্টাইলকে আরও আকর্ষণীয় করে তুলতে দৈনন্দিন পোশাকে রাখতে পারেন এই প্রিমিয়াম হুডি।",
+    features:["প্রিমিয়াম ফেব্রিক: 350+ GSM Heavyweight ফেব্রিক।","Drop Shoulder Design: কাঁধের সেলাই নিচের দিকে হওয়ায় পাওয়া যায় ট্রেন্ডি লুক।","Heavyweight & Cozy: শীতের পোশাকে ভারী ও আরামদায়ক অনুভূতি।","Modern Streetwear Style: তরুণদের জন্য আধুনিক ও আকর্ষণীয় ফ্যাশন।","Kangaroo Pocket: সামনে ব্যবহারিক পকেটের সুবিধা।","Comfortable Hood: স্টাইলের পাশাপাশি মাথার জন্য অতিরিক্ত কভারেজ।","Easy Styling: জিন্স, কার্গো প্যান্ট ও জগারসের সঙ্গে মানানসই।"]
+  },
+  {
+    id:51,
+	//stock:false,
+	//trending: true,
+	//isNew: true,
+    name:"প্রিমিয়াম আফগানি টুপি for Men | স্টাইলিশ শীতকালীন টুপি",
+    cat:"মেনস ফ্যাশন",
+    price:350,
+    discount:28,
+    img:"images/afgani-tupi-1.webp",
+    images:[
+      "images/afgani-tupi-1.webp",
+      "images/afgani-tupi-2.webp",
+      "images/afgani-tupi-3.webp",
+      "images/afgani-tupi-4.webp",
+      "images/afgani-tupi-5.webp"
+    ],
+	showColorSelector: true,
+	colors: [
+	  { name: "খাকি", color: "#bba88c" },
+	  { name: "আকাশি নীল", color: "#b0c8ed" },
+	  { name: "হালকা ধূসর", color: "#cbc8cd" },
+	  { name: "কালো", color: "#201c26" },
+	  { name: "অফ-হোয়াইট", color: "#d2cbc9" }
+	],
+    short:"প্রিমিয়াম আফগানি টুপি — ঐতিহ্যবাহী ডিজাইনে আধুনিক স্টাইল!",
+    desc:"প্রিমিয়াম আফগানি টুপি — ঐতিহ্যবাহী ডিজাইনে আধুনিক স্টাইল! আপনার ব্যক্তিত্বে যোগ করুন আভিজাত্য ও স্টাইলের নতুন মাত্রা। আমাদের প্রিমিয়াম আফগানি টুপি তৈরি করা হয়েছে ঐতিহ্যবাহী আফগানি স্টাইলের অনুপ্রেরণায়। আকর্ষণীয় ডিজাইন, সুন্দর রঙ এবং সামনের স্টাইলিশ স্টার ডিটেইলিং টুপিটিকে করেছে আরও দৃষ্টিনন্দন। শীতের দিনে বাইরে যাওয়া, ভ্রমণ কিংবা দৈনন্দিন ব্যবহারের জন্য এই টুপি হতে পারে আপনার পছন্দের একটি ফ্যাশন অ্যাকসেসরিজ। পাঞ্জাবি, কুর্তা ও ক্যাজুয়াল পোশাকের সঙ্গে মানিয়ে যায় সহজেই। আপনি যদি ঐতিহ্যবাহী ডিজাইনের পাশাপাশি আধুনিক ফ্যাশন পছন্দ করেন, তাহলে এই আফগানি টুপি হতে পারে আপনার সংগ্রহে রাখার মতো একটি অনন্য অ্যাকসেসরিজ। নিজের ব্যবহারের জন্য কিংবা প্রিয়জনকে উপহার দিতে এখনই বেছে নিন আপনার পছন্দের রং।",
+    features:["আকর্ষণীয় আফগানি ডিজাইন: ঐতিহ্য ও আধুনিক স্টাইলের সুন্দর সমন্বয়।","স্টাইলিশ স্টার ডিটেইলিং: টুপির সামনের অংশে নজরকাড়া ডিজাইন।","আকর্ষণীয় কালার: পোশাকের সঙ্গে মানানসই বিভিন্ন রঙের অপশন।","শীতকালীন ফ্যাশন: শীতের পোশাকের সঙ্গে স্টাইলিশ লুকের জন্য উপযোগী।","বিভিন্ন পোশাকের সঙ্গে মানানসই: পাঞ্জাবি, কুর্তা ও ক্যাজুয়াল পোশাকের সঙ্গে পরা যায়।","উপহার হিসেবেও উপযুক্ত: পরিবার ও প্রিয়জনদের জন্য হতে পারে সুন্দর একটি উপহার।"]
+  },
+  {
+    id:52,
+	//stock:false,
+	//trending: true,
+	//isNew: true,
+    name:"এক কালার প্রিমিয়াম ড্রপ শোল্ডার টি-শার্ট",
+    cat:"মেনস ফ্যাশন",
+    price:680,
+    discount:20,
+    img:"images/drop-shoulder-t-shart-1.webp",
+    images:[
+      "images/drop-shoulder-t-shart-1.webp",
+      "images/drop-shoulder-t-shart-2.webp",
+      "images/drop-shoulder-t-shart-3.webp",
+      "images/drop-shoulder-t-shart-4.webp",
+      "images/drop-shoulder-t-shart-5.webp"
+    ],
+	sizes: ["M", "L", "XL", "XXL"],
+	showColorSelector: true,
+	colors: [
+	  { name: "লাইট পিংক", color: "#f8c9d5" },
+	  { name: "ডার্ক গ্রিন", color: "#103f34" },
+	  { name: "ক্রিম", color: "#f3eadb" },
+	  { name: "ডার্ক গ্রে", color: "#464646" },
+	  { name: "লাইট ব্লু", color: "#adc8e8" }
+	],
+	sizeChart: [
+	  { "সাইজ": "M", "বুক": "৩৮ ইঞ্চি", "লম্বা": "২৭ ইঞ্চি", "হাতা": "৭.০৪ ইঞ্চি" },
+	  { "সাইজ": "L", "বুক": "৪০ ইঞ্চি", "লম্বা": "২৮ ইঞ্চি", "হাতা": "৭.০৬ ইঞ্চি" },
+	  { "সাইজ": "XL", "বুক": "৪২ ইঞ্চি", "লম্বা": "২৯ ইঞ্চি", "হাতা": "৮.০০ ইঞ্চি" },
+	  { "সাইজ": "XXL", "বুক": "৪৪ ইঞ্চি", "লম্বা": "৩০ ইঞ্চি", "হাতা": "৮.০২ ইঞ্চি" }
+	],
+    short:"স্টাইলিশ লুক, আরামদায়ক ফিটিং!",
+    desc:"স্টাইলিশ লুক, আরামদায়ক ফিটিং! আপনার প্রতিদিনের পোশাকে নিয়ে আসুন আধুনিক ও ট্রেন্ডি লুক। প্রিমিয়াম কটন ফেব্রিক দিয়ে তৈরি এই ড্রপ শোল্ডার টি-শার্ট আপনাকে দেবে স্টাইলিশ আউটলুক ও আরামদায়ক অনুভূতি। সিম্পল এবং আকর্ষণীয় ডিজাইন, প্রিমিয়াম ফ্যাব্রিক এবং ট্রেন্ডি ড্রপ শোল্ডার ফিট—সব মিলিয়ে আপনার স্টাইলকে আরও আকর্ষণীয় করে তুলতে দারুণ একটি পছন্দ।",
+    features:["স্টাইল: ট্রেন্ডি ড্রপ শোল্ডার ডিজাইন","ফেব্রিক: আরামদায়ক কটন","GSM: 220+ — ভারী ও প্রিমিয়াম ফিল","লুক: মডার্ন ও স্টাইলিশ","ব্যবহার: ক্যাজুয়াল আউটিং, বন্ধুদের সঙ্গে ঘোরাঘুরি কিংবা প্রতিদিনের ব্যবহারের জন্য উপযুক্ত।"]
+  },
+  {
+    id:53,
+	//stock:false,
+	//trending: true,
+	//isNew: true,
+    name:"The Army of Mehdi Drop Shoulder T-Shirt for Men",
+    cat:"মেনস ফ্যাশন",
+    price:650,
+    discount:24,
+    img:"images/the-army-of-mehdi-t-shirt-1.webp",
+    images:[
+      "images/the-army-of-mehdi-t-shirt-1.webp",
+      "images/the-army-of-mehdi-t-shirt-2.webp",
+      "images/the-army-of-mehdi-t-shirt-3.webp",
+      "images/the-army-of-mehdi-t-shirt-4.webp",
+      "images/the-army-of-mehdi-t-shirt-5.webp"
+    ],
+	sizes: ["M", "L", "XL", "XXL"],
+	showColorSelector: true,
+	colors: [
+	  { name: "জেট ব্ল্যাক", color: "#000000" },
+	  { name: "ডার্ক গ্রিন", color: "#264b3a" },
+	  { name: "সাদা", color: "#ffffff" }
+	],
+	sizeChart: [
+	  { "সাইজ": "M", "বুক": "৩৮ ইঞ্চি", "লম্বা": "২৭ ইঞ্চি", "হাতা": "৭.০৪ ইঞ্চি" },
+	  { "সাইজ": "L", "বুক": "৪০ ইঞ্চি", "লম্বা": "২৮ ইঞ্চি", "হাতা": "৭.০৬ ইঞ্চি" },
+	  { "সাইজ": "XL", "বুক": "৪২ ইঞ্চি", "লম্বা": "২৯ ইঞ্চি", "হাতা": "৮.০০ ইঞ্চি" },
+	  { "সাইজ": "XXL", "বুক": "৪৪ ইঞ্চি", "লম্বা": "৩০ ইঞ্চি", "হাতা": "৮.০২ ইঞ্চি" }
+	],
+    short:"The Army of Mehdi Drop Shoulder T-Shirt — স্টাইল হোক স্বতন্ত্র!",
+    desc:"The Army of Mehdi Drop Shoulder T-Shirt — আপনার স্টাইলে ফুটে উঠুক স্বতন্ত্রতা! 👕 আপনার ক্যাজুয়াল ফ্যাশনে যোগ করুন আধুনিক স্ট্রিটওয়্যারের ছোঁয়া! The Army of Mehdi Drop Shoulder T-Shirt-এ রয়েছে আকর্ষণীয় ডার্ক গ্রিন কালার এবং পেছনে নজরকাড়া সাদা গ্রাফিক প্রিন্ট। এর Drop Shoulder ডিজাইন তৈরি করে ট্রেন্ডি ও রিল্যাক্সড লুক, যা আপনার ব্যক্তিত্বকে আরও আকর্ষণীয়ভাবে ফুটিয়ে তুলতে সাহায্য করবে। যারা সাধারণ টি-শার্টের পরিবর্তে একটু আলাদা ডিজাইন ও আধুনিক ফিটিং পছন্দ করেন, তাদের জন্য এই গ্রাফিক টি-শার্ট হতে পারে দারুণ একটি পছন্দ। জিন্স, কার্গো প্যান্ট কিংবা ক্যাজুয়াল ট্রাউজারের সঙ্গে সহজেই মানিয়ে যাবে। কীভাবে স্টাইল করবেন?- এই টি-শার্টের সঙ্গে ব্ল্যাক কার্গো প্যান্ট ও স্নিকার্স পরলে তৈরি হবে আকর্ষণীয় স্ট্রিটওয়্যার লুক। আরও সাধারণ ক্যাজুয়াল স্টাইলের জন্য ব্লু বা ব্ল্যাক জিন্সের সঙ্গেও পরতে পারেন। কেন বেছে নেবেন এই টি-শার্ট? আপনি যদি আধুনিক Drop Shoulder ফিটিং, গাঢ় সবুজ রং এবং আকর্ষণীয় গ্রাফিক প্রিন্ট পছন্দ করেন, তাহলে The Army of Mehdi Drop Shoulder T-Shirt আপনার পোশাকের সংগ্রহে রাখতে পারেন। এখনই অর্ডার করুন AL-BARAKAH SHOP থেকে এবং আপনার স্টাইলে যোগ করুন স্বতন্ত্রতার ছোঁয়া!",
+    features:["Drop Shoulder Design: আধুনিক ও ট্রেন্ডি স্টাইলের জন্য বিশেষ ডিজাইন।","Dark Green Color: আকর্ষণীয় গাঢ় সবুজ রং, যা সহজেই নজর কাড়ে।","Graphic Back Print: পেছনে The Army of Mehdi-এর স্টেটমেন্টধর্মী গ্রাফিক ডিজাইন।","Streetwear Look: তরুণদের ক্যাজুয়াল ও স্ট্রিটওয়্যার ফ্যাশনের জন্য উপযুক্ত।","Easy Styling: জিন্স, কার্গো ও ক্যাজুয়াল প্যান্টের সঙ্গে মানানসই।","Versatile Wear: আড্ডা, ঘোরাঘুরি, ভ্রমণ ও দৈনন্দিন ব্যবহারের জন্য উপযোগী।"]
   }
 ];
 
