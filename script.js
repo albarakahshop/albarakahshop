@@ -260,6 +260,7 @@ const products=[
     cat:"ওয়াল ল্যাম্প",
     price:650,
     discount:25,
+	quantity: 1,
     img:"images/wall-lamp-1.webp",
     images:[
       "images/wall-lamp-1.webp",
@@ -281,6 +282,7 @@ const products=[
     cat:"ওয়াল ল্যাম্প",
     price:650,
     discount:25,
+	quantity: 4,
     img:"images/wall-lamp-2.webp",
     images:[
       "images/wall-lamp-2.webp",
@@ -302,6 +304,7 @@ const products=[
     cat:"ওয়াল ল্যাম্প",
     price:650,
     discount:25,
+	quantity: 2,
     img:"images/wall-lamp-3.webp",
     images:[
       "images/wall-lamp-3.webp",
@@ -323,6 +326,7 @@ const products=[
     cat:"ওয়াল ল্যাম্প",
     price:650,
     discount:25,
+	quantity: 1,
     img:"images/wall-lamp-4.webp",
     images:[
       "images/wall-lamp-4.webp",
@@ -344,6 +348,7 @@ const products=[
     cat:"ওয়াল ল্যাম্প",
     price:650,
     discount:25,
+	quantity: 3,
     img:"images/wall-lamp-5.webp",
     images:[
       "images/wall-lamp-5.webp",
@@ -365,6 +370,7 @@ const products=[
     cat:"ওয়াল ল্যাম্প",
     price:650,
     discount:25,
+	quantity: 1,
     img:"images/wall-lamp-6.webp",
     images:[
       "images/wall-lamp-6.webp",
@@ -386,6 +392,7 @@ const products=[
     cat:"ওয়াল ল্যাম্প",
     price:650,
     discount:25,
+	quantity: 1,
     img:"images/wall-lamp-7.webp",
     images:[
       "images/wall-lamp-7.webp",
@@ -407,6 +414,7 @@ const products=[
     cat:"ওয়াল ল্যাম্প",
     price:650,
     discount:25,
+	quantity: 5,
     img:"images/wall-lamp-8.webp",
     images:[
       "images/wall-lamp-8.webp",
@@ -428,6 +436,7 @@ const products=[
     cat:"ওয়াল ল্যাম্প",
     price:650,
     discount:25,
+	quantity: 3,
     img:"images/wall-lamp-9.webp",
     images:[
       "images/wall-lamp-9.webp",
@@ -449,6 +458,7 @@ const products=[
     cat:"ওয়াল ল্যাম্প",
     price:650,
     discount:23,
+	quantity: 1,
     img:"images/wall-lamp-10.webp",
     images:[
       "images/wall-lamp-10.webp",
@@ -470,6 +480,7 @@ const products=[
     cat:"ওয়াল ল্যাম্প",
     price:650,
     discount:25,
+	quantity: 1,
     img:"images/wall-lamp-11.webp",
     images:[
       "images/wall-lamp-11.webp",
@@ -491,6 +502,7 @@ const products=[
     cat:"ওয়াল ল্যাম্প",
     price:650,
     discount:25,
+	quantity: 2,
     img:"images/wall-lamp-12.webp",
     images:[
       "images/wall-lamp-12.webp",
@@ -512,6 +524,7 @@ const products=[
     cat:"ওয়াল ল্যাম্প",
     price:650,
     discount:25,
+	quantity: 3,
     img:"images/wall-lamp-13.webp",
     images:[
       "images/wall-lamp-13.webp",
@@ -533,6 +546,7 @@ const products=[
     cat:"ওয়াল ল্যাম্প",
     price:650,
     discount:25,
+	quantity: 4,
     img:"images/wall-lamp-14.webp",
     images:[
       "images/wall-lamp-14.webp",
@@ -554,6 +568,7 @@ const products=[
     cat:"ওয়াল ল্যাম্প",
     price:650,
     discount:25,
+	quantity: 1,
     img:"images/wall-lamp-15.webp",
     images:[
       "images/wall-lamp-15.webp",
@@ -575,6 +590,7 @@ const products=[
     cat:"ওয়াল ল্যাম্প",
     price:650,
     discount:25,
+	quantity: 1,
     img:"images/wall-lamp-16.webp",
     images:[
       "images/wall-lamp-16.webp",
@@ -596,6 +612,7 @@ const products=[
     cat:"ওয়াল ল্যাম্প",
     price:650,
     discount:25,
+	quantity: 1,
     img:"images/wall-lamp-17.webp",
     images:[
       "images/wall-lamp-17.webp",
@@ -638,6 +655,7 @@ const products=[
     cat:"টেবিল ল্যাম্প",
     price:720,
     discount:17,
+	quantity: 1,
     img:"images/table-lamp-1.webp",
     images:[
       "images/table-lamp-1.webp",
@@ -659,6 +677,7 @@ const products=[
     cat:"টেবিল ল্যাম্প",
     price:720,
     discount:17,
+	quantity: 1,
     img:"images/table-lamp-2.webp",
     images:[
       "images/table-lamp-2.webp",
@@ -680,6 +699,7 @@ const products=[
     cat:"টেবিল ল্যাম্প",
     price:720,
     discount:18,
+	quantity: 1,
     img:"images/table-lamp-3.webp",
     images:[
       "images/table-lamp-3.webp",
@@ -701,6 +721,7 @@ const products=[
     cat:"টেবিল ল্যাম্প",
     price:720,
     discount:15,
+	quantity: 2,
     img:"images/table-lamp-4.webp",
     images:[
       "images/table-lamp-4.webp",
@@ -722,6 +743,7 @@ const products=[
     cat:"টেবিল ল্যাম্প",
     price:720,
     discount:18,
+	quantity: 1,
     img:"images/table-lamp-5.webp",
     images:[
       "images/table-lamp-5.webp",
@@ -743,6 +765,7 @@ const products=[
     cat:"টেবিল ল্যাম্প",
     price:780,
     discount:18,
+	quantity: 1,
     img:"images/table-lamp-6.webp",
     images:[
       "images/table-lamp-6.webp",
@@ -764,6 +787,7 @@ const products=[
     cat:"টেবিল ল্যাম্প",
     price:780,
     discount:18,
+	quantity: 1,
     img:"images/table-lamp-7.webp",
     images:[
       "images/table-lamp-7.webp",
@@ -785,6 +809,7 @@ const products=[
     cat:"টেবিল ল্যাম্প",
     price:780,
     discount:18,
+	quantity: 1,
     img:"images/table-lamp-8.webp",
     images:[
       "images/table-lamp-8.webp",
@@ -806,6 +831,7 @@ const products=[
     cat:"টেবিল ল্যাম্প",
     price:720,
     discount:18,
+	quantity: 1,
     img:"images/table-lamp-9.webp",
     images:[
       "images/table-lamp-9.webp",
@@ -827,6 +853,7 @@ const products=[
     cat:"টেবিল ল্যাম্প",
     price:725,
     discount:18,
+	quantity: 1,
     img:"images/table-lamp-10.webp",
     images:[
       "images/table-lamp-10.webp",
@@ -848,6 +875,7 @@ const products=[
     cat:"টেবিল ল্যাম্প",
     price:720,
     discount:18,
+	quantity: 1,
     img:"images/table-lamp-11.webp",
     images:[
       "images/table-lamp-11.webp",
@@ -1247,6 +1275,7 @@ const products=[
     cat:"টেবিল ল্যাম্প",
     price:2050,
     discount:20,
+	quantity: 1,
     img:"images/charkul_image_1.webp",
     images:[
       "images/charkul_image_1.webp",
@@ -1857,9 +1886,19 @@ function isStockOut(p){
 }
 
 function stockStatusHTML(p){
-  return isStockOut(p)
-    ? '<span class="stock-status stock-out">🔴 Stock Out</span>'
-    : '<span class="stock-status stock-in">🟢 In Stock</span>';
+  if(isStockOut(p)){
+    return '<span class="stock-status stock-out">🔴 Stock Out</span>';
+  }
+
+  const quantityValue = p && p.quantity !== undefined && p.quantity !== null
+    ? String(p.quantity).trim()
+    : "";
+
+  const quantityHTML = quantityValue !== ""
+    ? ' <span class="stock-quantity">📦 ' + quantityValue + ' টি</span>'
+    : "";
+
+  return '<span class="stock-status stock-in">🟢 In Stock</span>' + quantityHTML;
 }
 
 function isInStock(p){
