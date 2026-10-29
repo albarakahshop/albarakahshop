@@ -2687,3 +2687,16 @@ body.product-details-page .header{background:rgba(255,254,250,.9)!important}
     order: 11;
   }
 }
+
+
+/* Product stock quantity shown beside In Stock when quantity is configured */
+.stock-quantity {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 6px;
+  color: #166534;
+  font-size: 0.88em;
+  font-weight: 600;
+  white-space: nowrap;
+}
